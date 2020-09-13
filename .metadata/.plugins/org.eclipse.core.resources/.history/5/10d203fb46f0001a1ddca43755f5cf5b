@@ -1,0 +1,33 @@
+package org.annotestng;
+
+import org.testng.annotations.Test;
+
+public class TestngTask {
+	@Test(groups= {"apple"})
+	public void test4() {
+	System.out.println("test4");
+
+	}
+	@Test(groups= {"bananna"})
+	public void test2() {
+	System.out.println("test2");
+
+	}
+	@Test(groups= {"apple"})
+	public void test1() {
+	System.out.println("test1");
+
+	}
+	@Test(groups= {"apple"})
+	public void test3() {
+	System.out.println("test3");
+
+	}
+	@Test(groups= {"bananna"})
+	public void test5() {
+	System.out.println("test5");
+
+	}
+
+}
+                

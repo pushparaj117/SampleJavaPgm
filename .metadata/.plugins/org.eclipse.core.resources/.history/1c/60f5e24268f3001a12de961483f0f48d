@@ -1,0 +1,92 @@
+package com.stepdef;
+
+import java.util.List;
+import java.util.Map;
+
+import com.manager.PageManager;
+import com.stepdef.BookingConfirmationPage;
+import com.stepdef.BookingHotelPage;
+import com.stepdef.LoginPage;
+import com.stepdef.SerachHotelPage;
+import com.stepdef.SelectHotelPage;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class StepDefiniton extends BaseClass {
+
+	PageManager manager1;
+	LoginPage loginPagePom;
+	SerachHotelPage searchHotelPom;
+	SelectHotelPage selectHotelPom;
+	BookingHotelPage bookingHotelPom;
+	BookingConfirmationPage bookingConfirmationPom;
+
+	@Given("user is on Adactin Page")
+	public void userIsOnAdactinPage() {
+		launchApp();
+		urlPass("http://adactinhotelapp.com/");
+	}
+
+	@When("user should enter {string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string},{string}and{string}")
+	public void userShouldEnterAnd(String unm, String psw, String lcn, String htls, String rmtyp, String rmnos,
+			String chckIn, String chckOut, String apr, String cpr, String fn, String ln, String add, String ccno,
+			String cctyp, String exmn, String exyr,String cvv) throws InterruptedException {
+
+		manager1 = PageManager.getInstance();
+		loginPagePom = manager1.getLoginPagePom();
+		loginPagePom.login(unm, psw);
+
+		searchHotelPom = manager1.getSearchHotelPom();
+		searchHotelPom.searchHotel(lcn, htls, rmtyp, rmnos, chckIn, chckOut, apr, cpr);
+
+		selectHotelPom = manager1.getSelectHotelPom();
+		selectHotelPom.selectHotel();
+
+		bookingHotelPom = manager1.getBookingHotelPom();
+
+		bookingHotelPom.bookingHotel(fn, ln, add, ccno, cctyp, exmn, exyr, cvv);
+
+//		
+//		manager1 = PageManager.getInstance();
+//		loginPagePom = manager1.getLoginPagePom();
+//		loginPagePom.login(unm, psw);
+//		
+//		searchHotelPom = manager1.getSearchHotelPom();
+//		searchHotelPom.searchHotel(lcn,htls,rmtyp,chckIn,chckOut);
+////		String roomNos = map.get("noOfRooms");
+////		String adultNos = map.get("adultsPerRoom");
+////		String childNos = map.get("childPerRoom");
+//		drdn(searchHotelPom.getRmnos(),roomNos);
+//		drdn(searchHotelPom.getAdprrm(),adultNos);
+//		drdn(searchHotelPom.getChldrm(),childNos);
+//		Thread.sleep(5000);
+//		klick(searchHotelPom.getSrch());
+
+//		selectHotelPom = manager1.getSelectHotelPom();
+//		selectHotelPom.selectHotel();
+//
+//		bookingHotelPom = manager1.getBookingHotelPom();
+//
+//		bookingHotelPom.bookingHotel(frstNm, lstNm, addrs, ccNo, expMon, expYr, cvvNo);
+////		String cardTp = map.get("cardType");
+//		drdn(bookingHotelPom.getCcdtyp(), cardTp);
+//		Thread.sleep(4000);
+//		klick(bookingHotelPom.getBknwbtn());
+	}
+
+	@When("print the booking id")
+	public void printTheBookingId() {
+		bookingConfirmationPom = manager1.getBookingConfirmationPom();
+		bookingConfirmationPom.orderPrint();
+	}
+
+	@Then("user should click the logout button")
+	public void userShouldClickTheLogoutButton() throws InterruptedException {
+		bookingConfirmationPom = manager1.getBookingConfirmationPom();
+		Thread.sleep(4000);
+		klick(bookingConfirmationPom.getLogOut());
+	}
+
+}

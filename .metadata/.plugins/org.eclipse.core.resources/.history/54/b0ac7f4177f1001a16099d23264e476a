@@ -1,0 +1,30 @@
+package org.annotestng;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class TestngDataProvider {
+	
+	@DataProvider(name="credential")
+	public Object[][] dataProv() {
+		return new Object[][] {
+			{"user1","122344"},
+			{"user2","144344"},
+			{"user3","177344"}
+			
+		};	
+
+	}
+	
+	@Test(dataProvider = "credential")
+	public void loginDetails() {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\PUSHPARAJ\\eclipse-workspace\\TestngWeekend\\driver\\chromedriver.exe");
+		
+
+	}
+	
+	
+	
+
+}

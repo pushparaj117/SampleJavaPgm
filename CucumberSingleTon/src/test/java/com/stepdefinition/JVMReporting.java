@@ -1,0 +1,29 @@
+package com.stepdefinition;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import net.masterthought.cucumber.Configuration;
+import net.masterthought.cucumber.ReportBuilder;
+
+public class JVMReporting {
+	
+	public static void generateJvmReport(String jsonfile) {
+		
+		File f = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\Reporting files");
+		
+		Configuration configuration = new Configuration(f, "Adactin");
+		configuration.addClassifications("sprint", "20");
+		configuration.addClassifications("Browser", "Chrome");
+		configuration.addClassifications("Env", "UAT");
+		configuration.addClassifications("OS", "WIN-10");
+		
+		List<String> jsonFiles = new ArrayList<String>();
+		jsonFiles.add(jsonfile);
+		
+		ReportBuilder bulid=new ReportBuilder(jsonFiles, configuration);
+		bulid.generateReports();
+	}
+
+}

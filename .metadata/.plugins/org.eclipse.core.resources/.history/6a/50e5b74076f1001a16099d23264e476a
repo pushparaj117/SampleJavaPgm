@@ -1,0 +1,5 @@
+package org.annotestng;
+
+public class TestngDataProvider {
+
+}

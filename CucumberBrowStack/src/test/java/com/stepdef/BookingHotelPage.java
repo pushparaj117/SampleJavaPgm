@@ -1,0 +1,108 @@
+package com.stepdef;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class BookingHotelPage extends BaseClass {
+	
+	public BookingHotelPage(){
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id="first_name") 
+    private WebElement fstnm ;
+	
+	@FindBy(id="last_name") 
+    private WebElement lstnm ;
+	
+	@FindBy(id="address") 
+    private WebElement add ;
+	
+	public WebElement getFstnm() {
+		return fstnm;
+	}
+
+	public WebElement getLstnm() {
+		return lstnm;
+	}
+
+	public WebElement getAdd() {
+		return add;
+	}
+
+	public WebElement getCcdno() {
+		return ccdno;
+	}
+
+	public WebElement getCcdtyp() {
+		return ccdtyp;
+	}
+
+	public WebElement getCcdexmon() {
+		return ccdexmon;
+	}
+
+	public WebElement getCcdexyr() {
+		return ccdexyr;
+	}
+
+	public WebElement getCvvno() {
+		return cvvno;
+	}
+
+	public WebElement getBknwbtn() {
+		return bknwbtn;
+	}
+
+	@FindBy(id="cc_num") 
+    private WebElement ccdno ;
+	
+	@FindBy(id="cc_type") 
+    private WebElement ccdtyp ;
+	
+
+	@FindBy(id="cc_exp_month") 
+    private WebElement ccdexmon ;
+	
+
+	@FindBy(id="cc_exp_year") 
+    private WebElement ccdexyr ;
+	
+	@FindBy(id="cc_cvv") 
+    private WebElement cvvno ;
+	
+	
+	@FindBy(id="book_now") 
+    private WebElement bknwbtn ;
+	
+	public void bookingHotel(String fn, String ln, String add, String ccno ,String cctyp,String exmn, String exyr, String cvv) throws InterruptedException {
+		
+		fill(getFstnm(), fn);
+		fill(getLstnm(), ln);
+		fill(getAdd(), add);
+		fill(getCcdno(), ccno);
+		drdn(getCcdtyp(), cctyp);
+		drdn(getCcdexmon(), exmn);
+		drdn(getCcdexyr(), exyr);
+		fill(getCvvno(), cvv);
+		klick(getBknwbtn());
+		
+	}
+
+//	public void bookingHotel1(String fn, String ln, String add2, String ccno, String cctyp, String exmn, String exyr,
+//			String cvv) {
+//		
+//		fill(getFstnm(), fn);
+//		fill(getLstnm(), ln);
+//		fill(getAdd(), add);
+//		fill(getCcdno(), ccno);
+//		drdn(getCcdtyp(), cctyp);
+//		drdn(getCcdexmon(), exmn);
+//		drdn(getCcdexyr(), exyr);
+//		fill(getCvvno(), cvv);
+//		klick(getBknwbtn());
+//		
+//	}
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.004763">
+<testcase classname="Verify Adactin using datatype details" name="Verify login details and enter" time="0.004763">
+<system-out><![CDATA[Given User is on Adactin page...............................................skipped
+When User should enter "Pushparaj", "HF07YG" and click......................skipped
+And User should search hotel by values "Melbourne","Hotel Sunshine","Standard","01/09/2020","02/09/2020","Pushparaj","Utham","No.1,FirstColny","4567765498768907","July","2022"and"234".skipped
+And print the booking id generated..........................................skipped
+Then user should enter the logout button....................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,11 @@
+Feature: Verifying user credentials
+	@Reg
+  Scenario: Verifying login details
+    Given User is in adactin hotel page
+    When User enter username and password
+    Then User should click the submit button
+    
+  Scenario: Verifying login details in flipkart
+    Given User is in flipkart home page
+    When User enter userId and passWord
+    Then User should click the login button

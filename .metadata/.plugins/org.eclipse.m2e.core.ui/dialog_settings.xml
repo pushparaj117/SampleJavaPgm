@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\PUSHPARAJ\eclipse-workspace\ApiTestingTask"/>
+			<item value="C:\Users\PUSHPARAJ\eclipse-workspace\CucumberSingleTon\src\test\java\com\runner\TestRunner.java"/>
+			<item value="C:\Users\PUSHPARAJ\eclipse-workspace\SeleniTask1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="org.browse"/>
+			<item value="org.mockja"/>
+			<item value="org.testng"/>
+			<item value="org."/>
+			<item value="com.mock"/>
+			<item value="com.api"/>
+			<item value="com.cucumberT"/>
+			<item value="com.cucum"/>
+			<item value="org.cucmb"/>
+			<item value="org.taskjava"/>
+			<item value="org.cucumber"/>
+			<item value="org.seltask"/>
+			<item value="org.samp"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="CucumberBrowseStack"/>
+			<item value="MockJavaPgm"/>
+			<item value="TestngWeekend"/>
+			<item value="SamplePomTask"/>
+			<item value="ApiTestingTask"/>
+			<item value="CucumCancelOrderId"/>
+			<item value="CucumberCancelOrid"/>
+			<item value="CucumberSingleTon"/>
+			<item value="JavaTaskMock"/>
+			<item value="CucumberTask"/>
+			<item value="SeleniTask1"/>
+			<item value="SampleMaven"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
